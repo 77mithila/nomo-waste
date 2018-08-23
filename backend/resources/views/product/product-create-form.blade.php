@@ -1,3 +1,7 @@
+@extends('layout')
+
+@section('content')
+
 <form action="/create-product" method="post">
 
     <label>Barcode No</label>
@@ -27,3 +31,5 @@
     <input type="submit">
 
 </form>
+
+@endsection
