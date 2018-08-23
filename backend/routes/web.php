@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/create-product-form','ShowCreateProductForm');
+Route::get('/create-product','CreateProduct');
+Route::get('/list-products','ListProducts');
