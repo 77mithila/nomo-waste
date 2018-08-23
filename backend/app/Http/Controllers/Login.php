@@ -21,7 +21,8 @@ class Login extends Controller
         if (session('user')) {
             return redirect('/');
         } else {
-            return redirect('/login-form');
+            return view('manager.login-form',['message' => 'Login Fail']);
         }
     }
+
 }

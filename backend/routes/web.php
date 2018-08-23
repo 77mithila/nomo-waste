@@ -21,9 +21,10 @@ Route::get('/create-product-form', function () {
 Route::post('/create-product','CreateProduct');
 Route::get('/list-products','ListProducts');
 Route::post('/login','Login');
+Route::get('/logout','Logout');
 
 Route::get('/login-form', function () {
-    return view('manager.login-form');
+    return view('manager.login-form',['message' => false]);
 });
 
 Route::get('/registration', function () {
