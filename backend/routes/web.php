@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -32,3 +34,9 @@ Route::get('/registration', function () {
 });
 
 Route::get('/create-manager','CreateManager');
+
+Route::get('/add-batch-form', function(Request $request) {
+    return view('product.add-batch-form', array(
+        'product_id' => $request->query('product_id'),
+    ));
+});
