@@ -11,7 +11,7 @@ namespace App\Product;
 
 interface ProductRepositoryInterface
 {
-    public function addProduct($product);
+    public function addProduct(int $barcode, string $name, int $categoryId);
 
     public function getAll();
 
