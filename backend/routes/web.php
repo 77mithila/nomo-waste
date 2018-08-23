@@ -18,5 +18,5 @@ Route::get('/', function () {
 Route::get('/create-product-form', function () {
     return view('product.product-create-form');
 });
-Route::get('/create-product','CreateProduct');
+Route::post('/create-product','CreateProduct');
 Route::get('/list-products','ListProducts');

@@ -15,9 +15,9 @@ class ProductRepository implements ProductRepositoryInterface
     public function addProduct($productData)
     {
         $product = new Product();
-        $product->barcode = $productData->query('barcode');
-        $product->name = $productData->query('name');
-        $product->category_id = $productData->query('categoryId');
+        $product->barcode = $productData->input('barcode');
+        $product->name = $productData->input('name');
+        $product->category_id = $productData->input('categoryId');
 
         $product->save();
 
