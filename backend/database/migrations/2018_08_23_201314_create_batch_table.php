@@ -13,7 +13,7 @@ final class CreateBatchTable extends Migration
             $table->integer('product_id');
                 $table->foreign('product_id')->references('id')->on('product');
             $table->integer('quantity');
-            $table->date('expiry_date');
+            $table->date('expiration_date');
             $table->integer('retail_price');
             $table->timestamps();
         });
