@@ -18,3 +18,14 @@ Route::get('/', function () {
 Route::get('/create-product-form','ShowCreateProductForm');
 Route::get('/create-product','CreateProduct');
 Route::get('/list-products','ListProducts');
+Route::post('/login','Login');
+
+Route::get('/login-form', function () {
+    return view('manager.login-form');
+});
+
+Route::get('/registration', function () {
+    return view('manager.registration-form');
+});
+
+Route::get('/create-manager','CreateManager');
