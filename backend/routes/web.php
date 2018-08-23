@@ -40,3 +40,4 @@ Route::get('/add-batch-form', function(Request $request) {
         'product_id' => $request->query('product_id'),
     ));
 });
+Route::post('/add-batch', 'AddBatch');

@@ -7,7 +7,13 @@
 
     <label>
         Expiration Date
-        <input name="name" type="text" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required="required">
+        <input name="expiration_date" type="text" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required="required">
+    </label>
+
+    <br>
+    <label>
+        Retail Price
+        <input name="retail_price" type="number" required="required">
     </label>
     <br>
     <br>

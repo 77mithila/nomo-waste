@@ -16,7 +16,11 @@ class CreateProduct
 
     public function __invoke(Request $request)
     {
-        return $this->productRepo->addProduct($request);
+        return $this->productRepo->addProduct(
+            $request->input('barcode'),
+            $request->input('name'),
+            $request->input('categoryId')
+        );
     }
 
 }

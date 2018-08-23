@@ -1,23 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mithila
- * Date: 23/08/18
- * Time: 17:16
- */
 
 namespace App\Product;
 
-
-class ProductRepository implements ProductRepositoryInterface
+final class ProductRepository implements ProductRepositoryInterface
 {
 
-    public function addProduct($productData)
+    public function addProduct(int $barcode, string $name, int $categoryId)
     {
         $product = new Product();
-        $product->barcode = $productData->input('barcode');
-        $product->name = $productData->input('name');
-        $product->category_id = $productData->input('categoryId');
+        $product->barcode = $barcode;
+        $product->name = $name;
+        $product->category_id = $categoryId;
 
         $product->save();
 
@@ -27,5 +20,10 @@ class ProductRepository implements ProductRepositoryInterface
     public function getAll()
     {
         return Product::all();
+    }
+
+    public function getById(int $id)
+    {
+        return Product::findOrFail($id);
     }
 }
