@@ -1,4 +1,4 @@
-<form action="/create-product" method="get">
+<form action="/create-product" method="post">
 
     <label>Barcode No</label>
     <input name="barcode" type="text">
@@ -23,6 +23,7 @@
         <option value="2">Other</option>
     </select>
     <br>
+    @csrf
     <input type="submit">
 
 </form>

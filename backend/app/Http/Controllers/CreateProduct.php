@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mithila
- * Date: 23/08/18
- * Time: 16:26
- */
 
 namespace App\Http\Controllers;
 
 use App\Product\ProductRepositoryInterface;
-use \Illuminate\Http\Request;
+use Illuminate\Http\Request;
 
 class CreateProduct
 {
