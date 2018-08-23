@@ -31,11 +31,12 @@ class ManagerRepository implements ManagerRepositoryInterface{
         $username = $managerData->input('username');
         $password = $managerData->input('password');
         $user = Manager::where('password',$password)->where('username', $username)->first();
-
-        if (count($user) > 0) {
+//dd($user);
+        if ($user && @count($user) > 0) {
             session(['user' => $user]);
         } else {
             return 'login fail';
         }
     }
+
 }

@@ -8,3 +8,7 @@
     <input type="submit" value="Login">
     @csrf
 </form>
+
+@if($message)
+    <h3>{{$message}}</h3>
+@endif
