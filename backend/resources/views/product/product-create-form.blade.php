@@ -2,6 +2,16 @@
 
 @section('content')
 
+@include('partials.breadcrumb', [
+                                    'title' => 'Add New Product to System',
+                                    'linkOne' => true,
+                                    'linkOneName' => 'Product',
+                                    'linkOneUrl' => '#',
+                                    'linkTwo' => true,
+                                    'linkTwoName' => 'Add Product',
+                                    'linkTwoUrl' => '#',
+                                ])
+
 <form action="/create-product" method="post">
 
     <label>Barcode No</label>
