@@ -14,7 +14,11 @@
 use Illuminate\Http\Request;
 
 Route::get('/', function () {
-    return view('welcome');
+    if (session('user')) {
+        return view('welcome',['user' => session('user')]);
+    } else {
+        return view('manager.login-form',['message' => 'Please log in']);
+    }
 });
 
 Route::get('/create-product-form', function () {
@@ -33,7 +37,7 @@ Route::get('/registration', function () {
     return view('manager.registration-form');
 });
 
-Route::get('/create-manager','CreateManager');
+Route::post('/create-manager','CreateManager');
 
 Route::get('/add-batch-form', function(Request $request) {
     return view('product.add-batch-form', array(

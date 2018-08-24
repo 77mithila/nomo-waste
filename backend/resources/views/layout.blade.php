@@ -32,8 +32,11 @@
                     <div class="dropdown profile-element">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear">
-                                <span class="block m-t-xs"> <strong class="font-bold">David
-                                        Williams</strong>
+                                <span class="block m-t-xs">
+                                    @if(session('user'))
+                                    <strong class="font-bold"> {{session('user')['name']}} </strong>
+                                    @endif
+
                                 </span>
                             </span>
                         </a>
