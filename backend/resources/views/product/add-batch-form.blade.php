@@ -29,7 +29,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Expiration Date</label>
                     <div class="col-sm-10">
-                        <input name="expiration_date" type="text" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required="required">
+                        <input name="expiration_date" type="date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required="required">
                     </div>
                 </div>
                 <div class="hr-line-dashed"></div>
