@@ -17,7 +17,7 @@
         <div class="ibox-title">
             <h4>Update Inventory
             @if($product)
-                <small>{{$product->name}}</small>
+                [{{$product->name}}]
             @endif
             </h4>
         </div>
