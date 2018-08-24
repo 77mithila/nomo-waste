@@ -42,4 +42,5 @@ class Batch extends Model
 
         return $expirationDate->sub($daysBeforeWarning) <= $date;
     }
+
 }
