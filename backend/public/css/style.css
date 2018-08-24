@@ -8227,3 +8227,9 @@ body.md-skin {
     margin: 0;
   }
 }
+
+/* Custom stuff */
+.alert-sm{
+  padding: 5px !important;
+  margin-bottom: 0px !important;
+}

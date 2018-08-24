@@ -34,8 +34,17 @@
                                     <td>{{ $batch->product->categoryName() }}</td>
                                     <td>{{ $batch->quantity  }}</td>
                                     <td>{{ $batch->expirationDate()->format('d-m-Y') }}</td>
-                                    <td><a class="btn btn-sm btn-success"
-                                           href="/create-offer-form?batch_id={{ $batch->id }}">Create offer</a></td>
+                                    <td>
+                                    @if($batch->offer)
+                                        <div class="alert alert-success alert-sm col-sm-6">
+                                            {{$batch->offer->discount_percentage}}% Discount Applied
+                                        </div>
+
+                                    @else
+                                    <a class="btn btn-sm btn-success"
+                                           href="/create-offer-form?batch_id={{ $batch->id }}">Create offer</a>
+                                    @endif
+                                    </td>
                                 </tr>
                             @endforeach
                         </table>
@@ -44,4 +53,6 @@
             </div>
         </div>
     </div>
+    <pre>
+    </pre>
 @endsection
