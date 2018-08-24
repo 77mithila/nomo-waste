@@ -37,9 +37,9 @@
                                     <td>
                                     @if($batch->offer)
                                         <div class="alert alert-success alert-sm col-sm-6">
-                                            {{$batch->offer->discount_percentage}}% Discount
+                                            {{$batch->offer->discount_percentage}}% Discounted
                                         </div>
-                                        <div margin-left="5px">
+                                        <div class="col-sm-5">
                                             <a class="btn btn-sm btn-warning"
                                                href="/update-offer-form?batch_id={{ $batch->id }}">Update offer</a>
                                         </div>

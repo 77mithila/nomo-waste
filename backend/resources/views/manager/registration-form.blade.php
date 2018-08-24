@@ -39,7 +39,7 @@
                                     <input type="text" class="form-control" name="storename">
                                 </div>
                                 <div class="form-group">
-                                    <label>Store ID</label>
+                                    <label>Store Reg No</label>
                                     <input type="number" class="form-control" name="storeId">
                                 </div>
                                 <div class="form-group">
