@@ -10,4 +10,6 @@ namespace App\Offer;
 interface OfferRepositoryInterface{
 
     public function addOffer($batchId, $discountPercentage);
+
+    public function updateOffer($batchId, $discountPercentage);
 }

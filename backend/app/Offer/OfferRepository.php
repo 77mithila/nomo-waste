@@ -24,4 +24,16 @@ final class OfferRepository implements OfferRepositoryInterface{
         $offer->save();
         return $offer;
     }
+
+    public function updateOffer($batchId, $discountPercentage)
+    {
+        $offer = Offer::where('batch_id',$batchId)->first();
+        if ($offer != null){
+            $offer->discount_percentage = $discountPercentage;
+            $offer->save();
+            return redirect('/expiring-inventory');
+        }
+        else
+            return 'Wrong batch ID';
+    }
 }

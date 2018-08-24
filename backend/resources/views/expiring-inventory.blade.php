@@ -19,12 +19,12 @@
                         <table class="table table-bordered table-striped">
                             <thead>
                             <tr>
-                                <th>Product Name</th>
-                                <th>Barcode</th>
-                                <th>Category</th>
-                                <th>Batch Qty</th>
-                                <th>Expire Date</th>
-                                <th>Actions</th>
+                                <th class="col-md-2">Product Name</th>
+                                <th class="col-md-2">Barcode</th>
+                                <th class="col-md-2">Category</th>
+                                <th class="col-md-1">Batch Qty</th>
+                                <th class="col-md-2">Expire Date</th>
+                                <th class="col-md-4">Actions</th>
                             </tr>
                             </thead>
                             @foreach ($inventory as $batch)
@@ -37,11 +37,15 @@
                                     <td>
                                     @if($batch->offer)
                                         <div class="alert alert-success alert-sm col-sm-6">
-                                            {{$batch->offer->discount_percentage}}% Discount Applied
+                                            {{$batch->offer->discount_percentage}}% Discount
+                                        </div>
+                                        <div margin-left="5px">
+                                            <a class="btn btn-sm btn-warning"
+                                               href="/update-offer-form?batch_id={{ $batch->id }}">Update offer</a>
                                         </div>
 
                                     @else
-                                    <a class="btn btn-sm btn-success"
+                                        <a class="btn btn-sm btn-success"
                                            href="/create-offer-form?batch_id={{ $batch->id }}">Create offer</a>
                                     @endif
                                     </td>
