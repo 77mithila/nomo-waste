@@ -14,10 +14,10 @@ class ManagerRepository implements ManagerRepositoryInterface{
 
         $manager = new Manager();
 
-        $manager->store_id = $managerData->query('storeId');
-        $manager->name = $managerData->query('name');
-        $manager->username = $managerData->query('username');
-        $manager->password = $managerData->query('password');
+        $manager->store_id = $managerData->input('storeId');
+        $manager->name = $managerData->input('name');
+        $manager->username = $managerData->input('username');
+        $manager->password = $managerData->input('password');
 
         $manager->save();
 
