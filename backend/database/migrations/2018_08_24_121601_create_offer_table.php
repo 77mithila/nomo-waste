@@ -16,7 +16,6 @@ class CreateOfferTable extends Migration
         Schema::create('offer', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('batch_id');
-            $table->foreign('batch_id')->references('id')->on('batch');
             $table->integer('discount_percentage');
             $table->date('end_date');
             $table->timestamps();

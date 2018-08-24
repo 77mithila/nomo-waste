@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         for($n = 0; $n < 100; $n++) {
             $id = DB::table('product')->insertGetId([
                 'barcode' => random_int(11111111, 99999999),
-                'name' => $faker->text(30),
+                'name' => $faker->text(10),
                 'category_id' => random_int(1, 12),
             ]);
 
