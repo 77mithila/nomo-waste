@@ -55,6 +55,7 @@ class DatabaseSeeder extends Seeder
         DB::table('manager')->insert(
             [
                 'store_id' => 1,
+                'store_name' => 'Caribbean Choice',
                 'name' => 'Pirate Captain',
                 'username' => 'pirate',
                 'password' => 'arr'
@@ -62,6 +63,7 @@ class DatabaseSeeder extends Seeder
         DB::table('manager')->insert(
             [
                 'store_id' => 2,
+                'store_name' => 'Lodbrok & Sons',
                 'name' => 'Viking Hero',
                 'username' => 'viking',
                 'password' => 'grr'
@@ -69,6 +71,7 @@ class DatabaseSeeder extends Seeder
         DB::table('manager')->insert(
             [
                 'store_id' => 3,
+                'store_name' => 'The Metal Ship',
                 'name' => 'Chief Sailor',
                 'username' => 'sailor',
                 'password' => 'brr'

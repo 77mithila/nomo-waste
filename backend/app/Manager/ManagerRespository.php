@@ -15,6 +15,7 @@ class ManagerRepository implements ManagerRepositoryInterface{
         $manager = new Manager();
 
         $manager->store_id = $managerData->input('storeId');
+        $manager->storename = $managerData->input('storename');
         $manager->name = $managerData->input('name');
         $manager->username = $managerData->input('username');
         $manager->password = $managerData->input('password');
@@ -30,8 +31,8 @@ class ManagerRepository implements ManagerRepositoryInterface{
     {
         $username = $managerData->input('username');
         $password = $managerData->input('password');
-        $user = Manager::where('password',$password)->where('username', $username)->first();
-//dd($user);
+        $user = Manager::where('username', $username)->where('password',$password)->first();
+
         if ($user && @count($user) > 0) {
             session(['user' => $user]);
         } else {
