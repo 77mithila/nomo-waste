@@ -35,18 +35,21 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        DB::table('manager')->insert([
+        DB::table('manager')->insert(
+            [
                 'store_id' => 12,
                 'name' => 'Pirate Captain',
                 'username' => 'pirate',
                 'password' => 'arr'
-            ],
+            ]);
+        DB::table('manager')->insert(
             [
                 'store_id' => 34,
                 'name' => 'Viking Hero',
                 'username' => 'viking',
                 'password' => 'grr'
-            ],
+            ]);
+        DB::table('manager')->insert(
             [
                 'store_id' => 56,
                 'name' => 'Chief Sailor',
