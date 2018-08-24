@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
                     random_int(1, 30)
                 ),
                 'product_id' => $id,
-                'retail_price' => random_int(50, 500),
+                'retail_price' => random_int(10, 50),
             ]);
         }
 

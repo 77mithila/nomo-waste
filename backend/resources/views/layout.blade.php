@@ -68,7 +68,9 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/list-offers"><i class="fa fa-diamond"></i> <span class="nav-label">Current Offers</span></a>
+                    <a href="/list-offers">
+                        <small class="nav-label">Offers (customer View)</small>
+                    </a>
                 </li>
             </ul>
         </div>
