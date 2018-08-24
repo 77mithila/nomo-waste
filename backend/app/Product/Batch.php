@@ -33,4 +33,13 @@ class Batch extends Model
     {
         return $this->product->category()->daysBeforeWarningAboutExpiration();
     }
+
+    public function isExpiringAt(\DateTimeImmutable $date) : bool
+    {
+        $expirationDate = $this->expirationDate();
+
+        $daysBeforeWarning = new \DateInterval(sprintf('P%uD', $this->daysBeforeWarningAboutExpiration()));
+
+        return $expirationDate->sub($daysBeforeWarning) <= $date;
+    }
 }
