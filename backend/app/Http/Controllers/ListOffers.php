@@ -12,9 +12,10 @@ class ListOffers extends Controller
     {
         $offers = DB::select(
             DB::raw(
-                "SELECT retail_price, discount_percentage, end_date, batch_id, barcode, product.name
-                 FROM offer ,batch ,product
-                 WHERE batch_id = batch.id AND product_id = product.id"));
+                "SELECT retail_price, discount_percentage, DATE_FORMAT(end_date,'%d %M %Y') AS end_date_formatted, batch_id, barcode, product.name, manager.store_name
+                 FROM offer ,batch ,product, manager
+                 WHERE batch_id = batch.id AND product_id = product.id AND offer.store_id = manager.store_id
+                 ORDER BY end_date"));
 
         return view('offer.list-offer',compact('offers'));
     }
