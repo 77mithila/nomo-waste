@@ -58,9 +58,8 @@ Route::post('/deduct-inventory','DeductInventory');
 Route::get('/expiring-inventory', 'ListExpiringBatches');
 
 Route::get('/create-offer-form', function(Request $request){
-   return view('offer.create-offer-form', array(
-       'batch_id' => $request->query('batch_id')
-   ));
+    $batch = App\Product\Batch::with('product')->where('id',$request->query('batch_id'))->first();
+    return view('offer.create-offer-form', compact('batch'));
 });
 
 Route::post('/create-offer','CreateOffer');

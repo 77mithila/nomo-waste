@@ -15,7 +15,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="ibox-title">
-            <h5>Input offer information</h5>
+            <h5>Input offer information | {{$batch->product->name}}</h5>
         </div>
         <div class="ibox-content">
             <form action="/create-offer" method="post" class="form-horizontal">
@@ -34,7 +34,7 @@
                 </div>
                 <div class="hr-line-dashed"></div>
                 @csrf
-                <input type="hidden" name="batch_id" value="{{ $batch_id }}" />
+                <input type="hidden" name="batch_id" value="{{ $batch->id }}" />
                 <div class="form-group">
                     <div class="col-sm-4 col-sm-offset-2">
                         <a class="btn btn-warning" href="/">Cancel</a>
