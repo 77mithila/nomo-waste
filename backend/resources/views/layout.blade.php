@@ -63,7 +63,7 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li><a href="/add-batch-form">Add Batch</a></li>
-                        <li><a href="/">Update Inventory Qty</a></li>
+                        <li><a href="/deduct-inventory-form">Update Inventory Qty</a></li>
                     </ul>
                 </li>
                 <li>
