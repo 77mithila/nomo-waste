@@ -51,4 +51,6 @@ Route::get('/deduct-inventory-form',function(){
    return view('product.deduct-inventory-form');
 });
 
-//Route::post('deduct-inventory','DeductInventory');
+Route::post('/deduct-inventory','DeductInventory');
+
+Route::get('/expiring-inventory', 'ListExpiringBatches');
