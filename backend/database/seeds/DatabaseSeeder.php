@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
                 'expiration_date' => sprintf(
                     '%u-%u-%u',
                     2018,
-                    random_int(9, 12),
+                    random_int(8, 12),
                     random_int(1, 30)
                 ),
                 'product_id' => $id,
