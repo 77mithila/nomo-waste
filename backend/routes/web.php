@@ -41,14 +41,16 @@ Route::post('/create-manager','CreateManager');
 
 Route::get('/add-batch-form', function(Request $request) {
     $product = App\Product\Product::where('id', $request->query('product_id'))->first();
-    return view('product.add-batch-form', array(
-        'product' => $product
-    ));
+    return view('product.add-batch-form', compact('product'));
 });
 Route::post('/add-batch', 'AddBatch');
 
-Route::get('/deduct-inventory-form',function(){
-   return view('product.deduct-inventory-form');
+Route::get('/deduct-inventory-form',function(Request $request){
+    $product = null;
+    if($request->query('product_id')){
+        $product = App\Product\Product::where('id', $request->query('product_id'))->first();
+    }
+    return view('product.deduct-inventory-form',compact('product'));
 });
 
 Route::post('/deduct-inventory','DeductInventory');

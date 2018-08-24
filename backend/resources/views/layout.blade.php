@@ -50,7 +50,7 @@
                 </li>
                 <li class="active">
                     <a href="/"><i class="fa fa-th-large"></i>
-                        <span class="nav-label">Product Management</span> <span class="fa arrow"></span>
+                        <span class="nav-label">Product</span> <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level">
                         <li><a href="/create-product-form">Create Product</a></li>
@@ -59,11 +59,12 @@
                 </li>
                 <li class="active">
                     <a href="/"><i class="fa fa-th-large"></i>
-                        <span class="nav-label">Inventory Management</span> <span class="fa arrow"></span>
+                        <span class="nav-label">Inventory</span> <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level">
-                        <li><a href="/add-batch-form">Add Batch</a></li>
+                        <li><a href="/list-products">Add Batch to Product</a></li>
                         <li><a href="/deduct-inventory-form">Update Inventory Qty</a></li>
+                        <li><a href="/expiring-inventory">Expiring Inventory</a></li>
                     </ul>
                 </li>
                 <li>
