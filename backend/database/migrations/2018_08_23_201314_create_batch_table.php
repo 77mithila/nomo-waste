@@ -11,11 +11,12 @@ final class CreateBatchTable extends Migration
         Schema::create('batch', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('product_id');
-                $table->foreign('product_id')->references('id')->on('product');
             $table->integer('quantity');
             $table->date('expiration_date');
             $table->integer('retail_price');
             $table->timestamps();
+
+//            $table->foreign('product_id')->references('id')->on('product');
         });
     }
 
