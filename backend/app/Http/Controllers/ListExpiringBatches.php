@@ -23,7 +23,7 @@ class ListExpiringBatches
     {
         $inventory = Batch::with('product')
             ->where('expiration_date', '>=', $today->format('Y-m-d'))
-            ->orderBy('expiration_date', 'desc')
+            ->orderBy('expiration_date', 'asc')
             ->get();
 
         return $inventory->filter(function(Batch $batch) use ($today) {
