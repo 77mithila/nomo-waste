@@ -18,18 +18,18 @@
             <h5>Input deduct information</h5>
         </div>
         <div class="ibox-content">
-            <form action="deduct-inventory" method="post" class="form-horizontal">
+            <form action="/deduct-inventory" method="post" class="form-horizontal">
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Barcode</label>
                     <div class="col-sm-10">
-                        <input name="barcode" type="number" required>
+                        <input name="barcode" type="number" required="required">
                     </div>
                 </div>
                 <div class="hr-line-dashed"></div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Quantity</label>
                     <div class="col-sm-10">
-                        <input name="quantity" type="number" required>
+                        <input name="quantity" type="number" required="required">
                     </div>
                 </div>
                 <div class="hr-line-dashed"></div>
