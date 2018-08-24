@@ -40,8 +40,9 @@ Route::get('/registration', function () {
 Route::post('/create-manager','CreateManager');
 
 Route::get('/add-batch-form', function(Request $request) {
+    $product = App\Product\Product::where('id', $request->query('product_id'))->first();
     return view('product.add-batch-form', array(
-        'product_id' => $request->query('product_id'),
+        'product' => $product
     ));
 });
 Route::post('/add-batch', 'AddBatch');

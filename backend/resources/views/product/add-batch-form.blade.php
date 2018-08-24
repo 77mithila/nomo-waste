@@ -15,7 +15,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="ibox-title">
-            <h5>Input batch information</h5>
+            <h4>Input batch - {{$product->name}} <small>(Barcode: {{$product->barcode}})</small></h4>
         </div>
         <div class="ibox-content">
             <form action="/add-batch" method="post" class="form-horizontal">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="hr-line-dashed"></div>
                 @csrf
-                <input type="hidden" name="product_id" value="{{ $product_id }}" />
+                <input type="hidden" name="product_id" value="{{ $product->id }}" />
                 <div class="form-group">
                     <div class="col-sm-4 col-sm-offset-2">
                         <a class="btn btn-warning" href="/">Cancel</a>
@@ -52,6 +52,5 @@
         </div>
     </div>
 </div>
-
 
 @endsection
