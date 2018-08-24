@@ -27,7 +27,7 @@
         <option value="2">Bread / Bakery</option>
         <option value="3">Canned / Jarred</option>
         <option value="4">Dairy</option>
-        <option value="5">Dray / Baking</option>
+        <option value="5">Dry / Baking</option>
         <option value="6">Frozen</option>
         <option value="7">Fresh Meat</option>
         <option value="8">Produce</option>
