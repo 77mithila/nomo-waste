@@ -17,4 +17,6 @@ interface ProductRepositoryInterface
 
     public function getById(int $id);
 
+    public function getByBarcode(int $barcode);
+
 }

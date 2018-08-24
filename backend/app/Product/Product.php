@@ -18,4 +18,11 @@ class Product extends Model
 
         $batch->save();
     }
+
+    public function deductInventory(int $productId, int $quantity){
+        $batch = Batch::where('product_id',$productId)->orderBy('expiration_date','asc')->first();
+        $batch->quantity -= $quantity;
+        $batch->save();
+        return $batch;
+    }
 }

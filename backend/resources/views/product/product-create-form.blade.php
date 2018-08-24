@@ -15,7 +15,7 @@
 <form action="/create-product" method="post">
 
     <label>Barcode No</label>
-    <input name="barcode" type="text">
+    <input name="barcode" type="number">
     <br>
     <label>Product Name</label>
     <input name="name" type="text">
