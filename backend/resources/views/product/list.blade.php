@@ -11,13 +11,45 @@
                                         'linkTwoName' => 'Products List',
                                         'linkTwoUrl' => '#',
                                     ])
+    
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Input new product information</h5>
+                    </div>
+                    <div class="ibox-content">
 
 
-@foreach ($products as $product)
-    <div>
-        {{ $product->name }} ({{ $product->categoryName() }})
-        <a href="/add-batch-form?product_id={{ $product->id }}">Add batch</a>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Barcode</th>
+                                <th>Category</th>
+                                <th>Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach ($products as $product)
+                                <tr>
+                                    <td>{{ $product->name }}</td>
+                                    <td>{{ $product->barcode }}</td>
+                                    <td>{{ $product->categoryName() }}</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-success"
+                                           href="/add-batch-form?product_id={{ $product->id }}">Add batch</a>
+                                        <a class="btn btn-sm btn-warning" href="#">Update Product</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-@endforeach
 
 @endsection
