@@ -34,5 +34,26 @@ class DatabaseSeeder extends Seeder
                 'retail_price' => random_int(50, 500),
             ]);
         }
+
+        DB::table('manager')->insert([
+                'store_id' => 12,
+                'name' => 'Pirate Captain',
+                'username' => 'pirate',
+                'password' => 'arr'
+            ],
+            [
+                'store_id' => 34,
+                'name' => 'Viking Hero',
+                'username' => 'viking',
+                'password' => 'grr'
+            ],
+            [
+                'store_id' => 56,
+                'name' => 'Chief Sailor',
+                'username' => 'sailor',
+                'password' => 'brr'
+            ])
+        ;
+
     }
 }
