@@ -14,4 +14,5 @@ class Offer extends Model
         return $this->belongsTo(Batch::class);
     }
 
+
 }

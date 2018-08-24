@@ -65,3 +65,10 @@ Route::get('/create-offer-form', function(Request $request){
 Route::post('/create-offer','CreateOffer');
 
 Route::get('/list-offers','ListOffers');
+
+Route::get('/update-offer-form', function(Request $request){
+    $batch = App\Product\Batch::with('product')->where('id',$request->query('batch_id'))->first();
+    return view('offer.update-offer-form', compact('batch'));
+});
+
+Route::post('/update-offer','UpdateOffer');
