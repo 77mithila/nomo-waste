@@ -22,6 +22,7 @@ class ListExpiringBatches
         $inventory = Batch::with('product')->with('offer')
             ->where('store_id',session('user')['store_id'])
             ->where('expiration_date', '>=', $today->format('Y-m-d'))
+            ->where('quantity','>',0)
             ->orderBy('expiration_date', 'asc')
             ->get();
 

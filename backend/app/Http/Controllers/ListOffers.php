@@ -15,6 +15,7 @@ class ListOffers extends Controller
                 "SELECT retail_price, discount_percentage, DATE_FORMAT(end_date,'%d %M %Y') AS end_date_formatted, batch_id, barcode, product.name, manager.store_name
                  FROM offer ,batch ,product, manager
                  WHERE batch_id = batch.id AND product_id = product.id AND offer.store_id = manager.store_id
+                 AND end_date > CURRENT_TIMESTAMP AND batch.quantity > 0
                  ORDER BY end_date"));
 
         return view('offer.list-offer',compact('offers'));

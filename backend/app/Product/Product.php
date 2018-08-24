@@ -21,16 +21,11 @@ class Product extends Model
     }
 
     public function deductInventory(int $productId, int $quantity){
-        $batch = Batch::where('product_id',$productId)->orderBy('expiration_date','asc')->first();
+        $batch = Batch::where('product_id',$productId)->orderBy('expiration_date','dsc')->first();
         $batch->quantity -= $quantity;
         $batch->save();
-        return $batch;
     }
 
-//    public function batch()
-//    {
-//        return $this->hasMany(Batch::class,'product_id');
-//    }
 
     public function category() : Category
     {
@@ -42,8 +37,4 @@ class Product extends Model
         return $this->category()->name();
     }
 
-//    public function batches()
-//    {
-//        return $this->hasMany('App\Product\Batch');
-//    }
 }

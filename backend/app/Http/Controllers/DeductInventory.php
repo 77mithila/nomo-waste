@@ -23,9 +23,10 @@ class DeductInventory extends Controller
         $product = $this->productsRepo->getByBarcode($barcode);
         if ($product != null)
         {
-            return $product->deductInventory($product->id,$quantity);
+            $product->deductInventory($product->id,$quantity);
+            return redirect('/list-products');
         }
         else
-            return 'No existing barcode!';
+            return 'Barcode does not exist';
     }
 }
