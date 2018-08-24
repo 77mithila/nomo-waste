@@ -68,17 +68,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/"><i class="fa fa-diamond"></i> <span class="nav-label">Single link</span></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Dropdown Link </span><span
-                                class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="/">test 1</a></li>
-                        <li><a href="/">test 2</a></li>
-                        <li><a href="/">test 3</a></li>
-                        <li><a href="/">test 4</a></li>
-                    </ul>
+                    <a href="/list-offers"><i class="fa fa-diamond"></i> <span class="nav-label">Current Offers</span></a>
                 </li>
             </ul>
         </div>
