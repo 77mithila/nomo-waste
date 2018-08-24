@@ -11,6 +11,8 @@ final class Category
     public static function fromId(int $id): self
     {
         switch ($id) {
+            case 0:
+                return new self(0, 'Category not specified', 0);
             case 1:
                 return new self(1, 'Beverages', 30);
             case 2:
