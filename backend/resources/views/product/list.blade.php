@@ -38,9 +38,10 @@
                                     <td>{{ $product->barcode }}</td>
                                     <td>{{ $product->categoryName() }}</td>
                                     <td>
-                                        <a class="btn btn-sm btn-success"
+                                        <a class="btn btn-sm btn-primary"
                                            href="/add-batch-form?product_id={{ $product->id }}">Add batch</a>
-                                        <a class="btn btn-sm btn-warning" href="#">Update Product</a>
+                                        <a class="btn btn-sm btn-warning"
+                                           href="/deduct-inventory-form?product_id={{$product->id}}">Update Qty</a>
                                     </td>
                                 </tr>
                             @endforeach
