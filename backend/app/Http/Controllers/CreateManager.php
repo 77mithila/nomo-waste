@@ -16,6 +16,7 @@ class CreateManager extends Controller
 
     public function __invoke(Request $request)
     {
-        return $this->managerRepo->addManager($request);
+        $this->managerRepo->addManager($request);
+        return redirect('/login-form');
     }
 }

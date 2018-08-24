@@ -16,7 +16,8 @@ final class AddBatch
 
     public function __invoke(Request $request)
     {
-        $product = $this->products->getById($request->input('product_id'));
+        $productId = $request->input('product_id');
+        $product = $this->products->getById($productId);
 
         $product->addBatch(
             $request->input('quantity'),

@@ -32,8 +32,11 @@
                     <div class="dropdown profile-element">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear">
-                                <span class="block m-t-xs"> <strong class="font-bold">David
-                                        Williams</strong>
+                                <span class="block m-t-xs">
+                                    @if(session('user'))
+                                    <strong class="font-bold"> {{session('user')['name']}} </strong>
+                                    @endif
+
                                 </span>
                             </span>
                         </a>
@@ -50,8 +53,17 @@
                         <span class="nav-label">Product Management</span> <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level">
-                        <li><a href="/">Create Product</a></li>
-                        <li><a href="/">List Products</a></li>
+                        <li><a href="/create-product-form">Create Product</a></li>
+                        <li><a href="/list-products">List Products</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="/"><i class="fa fa-th-large"></i>
+                        <span class="nav-label">Inventory Management</span> <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="/add-batch-form">Add Batch</a></li>
+                        <li><a href="/">Update Inventory Qty</a></li>
                     </ul>
                 </li>
                 <li>

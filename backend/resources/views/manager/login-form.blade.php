@@ -42,8 +42,9 @@
                                     <input type="password" placeholder="Password" class="form-control" name="password">
                                 </div>
                                 <div>
-                                    <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Log
-                                            in</strong></button>
+                                    <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit">
+                                        <strong>Log in</strong>
+                                    </button>
                                     <label> <input type="checkbox" class="i-checks"> Remember me </label>
                                 </div>
                                 @csrf
