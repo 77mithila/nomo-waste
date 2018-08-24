@@ -49,7 +49,7 @@
                     </div>
                 </li>
                 <li class="active">
-                    <a href="/"><i class="fa fa-th-large"></i>
+                    <a href="/"><i class="fa fa-gift "></i>
                         <span class="nav-label">Product</span> <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level">

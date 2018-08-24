@@ -15,6 +15,7 @@ class CreateOfferTable extends Migration
     {
         Schema::create('offer', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('store_id');
             $table->integer('batch_id');
             $table->integer('discount_percentage');
             $table->date('end_date');

@@ -10,6 +10,7 @@ final class CreateBatchTable extends Migration
     {
         Schema::create('batch', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('store_id');
             $table->integer('product_id');
             $table->integer('quantity');
             $table->date('expiration_date');
