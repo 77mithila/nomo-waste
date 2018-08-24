@@ -3,6 +3,7 @@
 namespace App\Offer;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Product\Batch;
 
 class Offer extends Model
 {
@@ -10,7 +11,7 @@ class Offer extends Model
 
     public function batch()
     {
-        return $this->belongsTo(\App\Product\Batch::class);
+        return $this->belongsTo(Batch::class);
     }
 
 }

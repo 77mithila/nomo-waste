@@ -4,6 +4,7 @@ namespace App\Product;
 
 use DateTimeImmutable as DateTime;
 use Illuminate\Database\Eloquent\Model;
+use App\Offer\Offer;
 
 class Batch extends Model
 {
@@ -26,7 +27,7 @@ class Batch extends Model
 
     public function offer()
     {
-        return  $this->hasOne(\App\Offer\Offer::class);
+        return  $this->hasOne(Offer::class);
     }
 
     public function barcode() : int

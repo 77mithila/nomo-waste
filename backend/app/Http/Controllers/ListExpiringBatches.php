@@ -14,14 +14,12 @@ class ListExpiringBatches
 
         $inventory = $this->getExpiringBatches($today);
 
-        return view('expiring-inventory', array(
-            'inventory' => $inventory,
-        ));
+        return view('expiring-inventory', compact('inventory'));
     }
 
     private function getExpiringBatches(DateTime $today)
     {
-        $inventory = Batch::with('product')
+        $inventory = Batch::with('product')->with('offer')
             ->where('expiration_date', '>=', $today->format('Y-m-d'))
             ->orderBy('expiration_date', 'asc')
             ->get();
