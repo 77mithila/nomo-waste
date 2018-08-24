@@ -11,6 +11,7 @@ class Product extends Model
     public function addBatch(int $quantity, string $expirationDate, int $retailPrice) : void
     {
         $batch = new Batch();
+        $batch->store_id = session('user')['store_id'];
         $batch->quantity = $quantity;
         $batch->expiration_date = $expirationDate;
         $batch->product_id = $this->id;

@@ -8,6 +8,7 @@ final class ProductRepository implements ProductRepositoryInterface
     public function addProduct(int $barcode, string $name, int $categoryId)
     {
         $product = new Product();
+        $product->store_id = session('user')['store_id'];
         $product->barcode = $barcode;
         $product->name = $name;
         $product->category_id = $categoryId;
@@ -19,7 +20,7 @@ final class ProductRepository implements ProductRepositoryInterface
 
     public function getAll()
     {
-        return Product::all();
+        return Product::where('store_id',session('user')['store_id'])->get();
     }
 
     public function getById(int $id)

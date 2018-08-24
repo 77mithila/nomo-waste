@@ -15,6 +15,7 @@ final class OfferRepository implements OfferRepositoryInterface{
     public function addOffer($batchId, $discountPercentage)
     {
         $offer = new Offer();
+        $offer->store_id = session('user')['store_id'];
         $offer->batch_id = $batchId;
         $batch = Batch::where('id',$batchId)->first();
         $offer->discount_percentage = $discountPercentage;
