@@ -53,3 +53,11 @@ Route::get('/deduct-inventory-form',function(){
 Route::post('/deduct-inventory','DeductInventory');
 
 Route::get('/expiring-inventory', 'ListExpiringBatches');
+
+Route::get('/create-offer-form', function(Request $request){
+   return view('offer.create-offer-form', array(
+       'batch_id' => $request->query('batch_id')
+   ));
+});
+
+Route::post('/create-offer','CreateOffer');
