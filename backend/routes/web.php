@@ -62,3 +62,5 @@ Route::get('/create-offer-form', function(Request $request){
 });
 
 Route::post('/create-offer','CreateOffer');
+
+Route::get('/list-offers','ListOffers');

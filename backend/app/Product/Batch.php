@@ -24,6 +24,11 @@ class Batch extends Model
         return $this->belongsTo(Product::class);
     }
 
+    public function offer()
+    {
+        return  $this->hasOne(\App\Offer\Offer::class);
+    }
+
     public function barcode() : int
     {
         return $this->product->barcode;
