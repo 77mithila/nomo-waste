@@ -45,3 +45,9 @@ Route::get('/add-batch-form', function(Request $request) {
     ));
 });
 Route::post('/add-batch', 'AddBatch');
+
+Route::get('/deduct-inventory-form',function(){
+   return view('product.deduct-inventory-form');
+});
+
+Route::post('deduct-inventory','DeductInventory');

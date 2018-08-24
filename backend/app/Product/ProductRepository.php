@@ -26,4 +26,13 @@ final class ProductRepository implements ProductRepositoryInterface
     {
         return Product::findOrFail($id);
     }
+
+    public function getByBarcode(int $barcode)
+    {
+        $product = Product::where('barcode',$barcode)->first();
+        if ($product != null)
+            return $product;
+        else
+            return null;
+    }
 }
