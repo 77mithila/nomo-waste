@@ -12,11 +12,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $faker = Faker\Factory::create();
+
         // $this->call(UsersTableSeeder::class);
         for($n = 0; $n < 100; $n++) {
             $id = DB::table('product')->insertGetId([
                 'barcode' => random_int(11111111, 99999999),
-                'name' => str_random(10),
+                'name' => $faker->text(30),
                 'category_id' => random_int(1, 12),
             ]);
 
