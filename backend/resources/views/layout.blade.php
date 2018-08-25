@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>NoMo-Waste</title>
+    <title>NoMo-Waste - Demo V 1.0.0</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/plugins/font-awesome/css/font-awesome.css" rel="stylesheet">
