@@ -34,7 +34,8 @@
                             <span class="clear">
                                 <span class="block m-t-xs">
                                     @if(session('user'))
-                                    <strong class="font-bold"> {{session('user')['name']}} </strong>
+                                    <strong class="font-bold"> {{session('user')['name']}} </strong><br>
+                                        <small>{{session('user')['store_name']}}</small>
                                     @endif
 
                                 </span>
