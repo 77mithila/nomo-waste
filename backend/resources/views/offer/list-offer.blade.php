@@ -40,6 +40,23 @@
 
                 <div>
                     <div class="feed-activity-list">
+                        <div class="feed-element">
+
+                            <div class="media-body ">
+
+                                <div class="col-sm-6">
+                                    <a class="btn btn-info btn-lg" href="/list-offers?orderBy=store_name">
+                                        Order By Store Name
+                                    </a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a class="btn btn-info btn-lg" href="/list-offers?orderBy=end_date">
+                                        Order By Expire Date
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
 
                         @foreach ($offers as $offer)
 
